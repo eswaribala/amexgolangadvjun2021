@@ -1,0 +1,17 @@
+go get -u github.com/swaggo/swag/cmd/swag
+go get -u github.com/swaggo/http-swagger
+go get -u github.com/alecthomas/template
+
+Generate Swagger documentation
+Let us divide this whole process of API documentation into 3 steps:
+
+Adding annotations in code
+Generating Swagger specs (swagger.json and swagger.yaml)
+Serving the Swagger UI using the specs generated in the previous step
+
+ Generate swagger.json
+Once we are done annotating our main method and all the APIs, we shall generate the swagger docs with the swag init command, as below:
+
+# In your project dir (~/GOPATH/src/swaggo-orders-api normally)
+swag init -g main.go
+
